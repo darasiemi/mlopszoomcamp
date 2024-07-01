@@ -18,5 +18,6 @@
 04-deployment/batch/homework/output/*
 05-monitoring/models/*
 05-monitoring/data/*
+06-best-practices/code/integration-tests/docker-compose.yml
 mlflow.db
 

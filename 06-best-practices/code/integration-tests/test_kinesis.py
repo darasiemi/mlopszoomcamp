@@ -7,12 +7,14 @@ from pprint import pprint
 import boto3
 from deepdiff import DeepDiff
 
+AWS_DEFAULT_REGION = os.getenv('AWS_DEFAULT_REGION')
 kinesis_endpoint = os.getenv('KINESIS_ENDPOINT_URL', "http://localhost:4566")
 kinesis_client = boto3.client('kinesis', endpoint_url=kinesis_endpoint)
 
 stream_name = os.getenv('PREDICTIONS_STREAM_NAME', 'ride_predictions')
 shard_id = 'shardId-000000000000'
 
+print(stream_name)
 shard_iterator_response = kinesis_client.get_shard_iterator(
     StreamName=stream_name,
     ShardId=shard_id,
@@ -21,15 +23,15 @@ shard_iterator_response = kinesis_client.get_shard_iterator(
 
 shard_iterator_id = shard_iterator_response['ShardIterator']
 
-# print(shard_iterator_id )
-
 
 records_response = kinesis_client.get_records(
     ShardIterator=shard_iterator_id,
     Limit=1,
 )
 
-print(records_response)
+
+records = records_response['Records']
+pprint(records)
 
 records = records_response['Records']
 pprint(records)

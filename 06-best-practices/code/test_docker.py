@@ -1,6 +1,5 @@
-
 # # import lambda_function
-# import requests 
+# import requests
 
 # event = {
 #     "Records": [

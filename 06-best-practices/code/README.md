@@ -100,3 +100,45 @@ Get the data and run
 ```bash
 echo data | base64 -d
 ```
+
+To run the bash script that runs the integration test using boto3
+```bash
+./run.sh
+```
+To install pylint
+```bash
+pipenv install --dev pylint==2.14.4
+```
+
+To run pylint on all codes
+```bash
+pylint --recursive=y .
+```
+
+To install black and isort
+```bash
+pipenv install --dev black isort
+```
+
+To check if changes black will make
+```bash
+black --diff . | less
+```
+
+To skip string normalization
+```bash
+black --skip-string-normalization --diff . | less
+```
+
+To check what changes will be made by isort
+```bash
+isort --diff .
+```
+
+To run all without make
+```bash
+isort .
+black .
+pylint --recursive=y .
+pytest test/
+```

@@ -34,7 +34,7 @@ docker run -it --rm \
     stream-model-duration:v2
 ```
 
-To download files from S3 to local model directory 
+To download files from S3 to local model directory
 ```bash
 aws s3 cp --recursive s3://mlflows-artifacts-remote/1/run_id/artifacts/model/ model
 ```
@@ -93,7 +93,7 @@ To get records
 ```bash
 aws  --endpoint-url=http://localhost:4566 \
     kinesis     get-records \
-    --shard-iterator "AAAAAAAAAAHebXZfJF+ip5pICTTimTJrH3nDHrcq2uvIwSBoiSV6mbmJGs7l7eHF6YjuDWcd83eV93YnlwBGhdDkNwFGVa6qibalZBwWhh3pPJUwlk/njd1c3tHhpXnBCLhkCLxFN0u6pi9xEGDdgNL16iOeGml6YvhxInhhEhJwgSi2kAG7XTqMZoDcl/4RUCzDRWGGmCwCSwzzbCJQJEV60vuGKVeV" 
+    --shard-iterator "AAAAAAAAAAHebXZfJF+ip5pICTTimTJrH3nDHrcq2uvIwSBoiSV6mbmJGs7l7eHF6YjuDWcd83eV93YnlwBGhdDkNwFGVa6qibalZBwWhh3pPJUwlk/njd1c3tHhpXnBCLhkCLxFN0u6pi9xEGDdgNL16iOeGml6YvhxInhhEhJwgSi2kAG7XTqMZoDcl/4RUCzDRWGGmCwCSwzzbCJQJEV60vuGKVeV"
 ```
 
 Get the data and run
@@ -141,4 +141,19 @@ isort .
 black .
 pylint --recursive=y .
 pytest test/
+```
+
+To install pre-commit
+```bash
+pipenv install --dev pre-commit
+```
+
+To create sample-config
+```bash
+pre-commit sample-config > .pre-commit-config.yaml
+```
+
+To create pre-commit hooks
+```bash
+pre-commit install
 ```

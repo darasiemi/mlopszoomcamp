@@ -71,5 +71,5 @@ The course covers:
 
 * End-to-end project with all the things above
 
-[More details](07-project/)
+[More details](https://github.com/peter716/mental_health_mlops_project)
 

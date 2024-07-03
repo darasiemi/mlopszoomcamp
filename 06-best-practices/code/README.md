@@ -18,6 +18,7 @@ The instructions for replicating this module are as follows:
 
 To install pytest `pipenv install --dev pytest`
 
+To build docker image,
 ```bash
 docker build -t stream-model-duration:v2 .
 ```
@@ -37,7 +38,7 @@ docker build -t stream-model-duration:v2 .
 ```bash
 pipenv install --dev deepdiff
 ```
-
+To run docker
 ```bash
 docker run -it --rm \
     -p 8080:8080 \

@@ -20,5 +20,7 @@
 05-monitoring/models/*
 05-monitoring/data/*
 06-best-practices/code/integration-tests/docker-compose.yml
+06-best-practices/code/integration-tests/__pycache__
+06-best-practices/code/test/__pycache__
 mlflow.db
 

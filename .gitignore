@@ -22,5 +22,6 @@
 06-best-practices/code/integration-tests/docker-compose.yml
 06-best-practices/code/integration-tests/__pycache__/*
 06-best-practices/code/test/__pycache__/*
+04-deployment/batch/homework/output/*
 mlflow.db
 

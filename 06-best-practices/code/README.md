@@ -157,3 +157,12 @@ To create pre-commit hooks
 ```bash
 pre-commit install
 ```
+
+To check if configuration file is valid
+```bash
+terraform validate
+```
+To initialize terraform
+```bash
+terraform init
+```

@@ -1,0 +1,2 @@
+regex:^.*AWS_ACCESS_KEY_ID=.*$
+regex:^.*AWS_SECRET_ACCESS_KEY=.*$

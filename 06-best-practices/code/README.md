@@ -166,3 +166,12 @@ To initialize terraform
 ```bash
 terraform init
 ```
+To send state file to S3 bucket
+```bash
+terraform apply
+```
+
+To initialize terraform with certain AWS user profile
+```bash
+terraform init --profile profile
+```

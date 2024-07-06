@@ -3,7 +3,7 @@ terraform {
   required_version = ">= 1.0"
   backend "s3" {
     bucket  = "tf-state-mlops-zoomcamp-dara"
-    key     = "mlops-zoomcamp.tfstate"
+    key     = "mlops-zoomcamp-stg.tfstate"
     region  = "eu-north-1"
     encrypt = true
   }

@@ -175,3 +175,47 @@ To initialize terraform with certain AWS user profile
 ```bash
 terraform init --profile profile
 ```
+
+To configure terraform with variable file
+```bash
+terraform plan -var-file=vars/stg.tfvars
+```
+Similarly, to create the files in AWS
+```bash
+terraform apply -var-file=vars/stg.tfvars
+```
+
+To destroy resources
+```bash
+terraform destroy -var-file=vars/stg.tfvars
+```
+
+To copy files from previously created Mlflow bucket, to staging bucket, and deploy model, change directory to infrastruture/scripts
+```bash
+./deploy-model.sh
+```
+If file is not executable, run
+```bash
+chmod +x deploy-model.sh
+```
+To set new kinesis stream environment variable
+```bash
+export KINESIS_STREAM_INPUT="stg_ride_events-mlops-zoomcamp"
+```
+To put data in kinesis
+```bash
+aws kinesis put-record \
+    --stream-name ${KINESIS_STREAM_INPUT} \
+    --partition-key 1 \
+    --cli-binary-format raw-in-base64-out \
+    --data '{
+        "ride": {
+            "PULocationID": 130,
+            "DOLocationID": 205,
+            "trip_distance": 3.66
+        }, 
+        "ride_id": 156
+    }'
+```
+
+You can then check CloudWatch->Logs->Log groups->particular file to check if it logged successfully.

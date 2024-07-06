@@ -1,14 +1,19 @@
-`KINESIS_STREAM_INPUT=ride_events
+To put dummy data in kinesis
+```bash
+KINESIS_STREAM_INPUT=ride_events
 aws kinesis put-record \
     --stream-name ${KINESIS_STREAM_INPUT} \
     --partition-key 1 \
     --data "Hello, this is a test." \
-    --cli-binary-format raw-in-base64-out`
+    --cli-binary-format raw-in-base64-out
+```
 
-
-`aws kinesis put-record \
+To put records in kinesis stream
+```bash
+aws kinesis put-record \
     --stream-name ${KINESIS_STREAM_INPUT} \
     --partition-key 1 \
+    --cli-binary-format raw-in-base64-out \
     --data '{
         "ride": {
             "PULocationID": 130,
@@ -17,10 +22,12 @@ aws kinesis put-record \
         }, 
         "ride_id": 156
     }'\
-     --cli-binary-format raw-in-base64-out`
+     
+```
 
-
-     `KINESIS_STREAM_OUTPUT='ride_predictions'
+To get shard iterator
+```bash
+KINESIS_STREAM_OUTPUT='ride_predictions'
 SHARD='shardId-000000000000'
 
 SHARD_ITERATOR=$(aws kinesis \
@@ -29,7 +36,7 @@ SHARD_ITERATOR=$(aws kinesis \
         --shard-iterator-type TRIM_HORIZON \
         --stream-name ${KINESIS_STREAM_OUTPUT} \
         --query 'ShardIterator' \
-)`
+)```
 
 `RESULT=$(aws kinesis get-records --shard-iterator $SHARD_ITERATOR)`
 

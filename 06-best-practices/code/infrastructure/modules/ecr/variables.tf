@@ -22,7 +22,7 @@ variable "docker_image_local_path" {
 variable "region" {
     type        = string
     description = "region"
-    default = "eu-west-1"
+    default = "eu-north-1"
 }
 
 variable "account_id" {

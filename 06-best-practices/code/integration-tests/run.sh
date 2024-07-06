@@ -22,7 +22,7 @@ fi
 
 docker-compose up -d
 
-sleep 1
+sleep 5
 
 aws --endpoint-url=http://localhost:4566 \
     kinesis create-stream \

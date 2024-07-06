@@ -25,5 +25,6 @@
 04-deployment/batch/homework/output/*
 06-best-practices/code/infrastructure/.terraform/*
 06-best-practices/code/infrastructure/.terraform.lock.hcl
+06-best-practices/homework/output/*
 mlflow.db
 

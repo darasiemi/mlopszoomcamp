@@ -26,5 +26,8 @@
 06-best-practices/code/infrastructure/.terraform/*
 06-best-practices/code/infrastructure/.terraform.lock.hcl
 06-best-practices/homework/output/*
+06-best-practices/homework/data/*
+06-best-practices/homework/__pycache__/*
+06-best-practices/homework/tests/__pycache__/*
 mlflow.db
 

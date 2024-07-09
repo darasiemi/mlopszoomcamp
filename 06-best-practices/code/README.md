@@ -1,3 +1,21 @@
+I am very happy to have completed the final week of the MLOps Zoomcamp on best practices in MLOps. The module covered unit testing, integration tests, CI/CD etc.
+
+For unit testing, I was able to test my code using pytest. Although it wasn’t my first time of using pytest for unit testing, it was my first time configuring my IDE(VS code) to do unit testing outside the terminal. I really loved the experience.
+
+I also configured some integration tests using docker to launch a kinesis stream and compare the actual records in the kinesis stream with the expected records using DeepDiff. I was also able to use LocalStack to launch AWS services such as S3 buckets, lambda and kinesis.
+
+Another interesting module I enjoyed from this week was on linting using pylint and subsequent formatting using isort and black. Linting is used to detect issues with code quality, with respect to its adherence to PEP8 Python guidelines and best practices.
+
+Also, I learnt how to make git pre-commit hooks, to ensure that my git commits are without unwanted behaviours such as trailing whitespaces in code, large files, keys, etc. 
+
+I also learnt to use Makefile for automating my code. Although I have previously used Make in C/C++, it was my first time using Makefile in Python. 
+
+In addition, I also learnt how to use terraform to provision resources in AWS. This builds on my previous experience of using terraform to manage resources in GCP. I am very happy to have been able to explore AWS as another cloud option.
+
+Finally, I learnt the use of  CI/CD workflows through GitHub Actions, which allowed me to automate various tasks in the machine learning and software lifecycle. By defining workflows in YAML files, I could set up triggers for events like pushes and pull requests.
+
+The instructions for replicating this module are as follows:
+
 To install pytest `pipenv install --dev pytest`
 
 ```bash

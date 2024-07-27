@@ -72,9 +72,9 @@ To create elastic container registry for docker container
 Logging in
 `$(aws ecr get-login --no-include-email)`
 
-Pushing
+Pushing to ECR
 ```bash
-REMOTE_URI="387546586013.dkr.ecr.eu-west-1.amazonaws.com/duration-model"
+REMOTE_URI="387546586013.dkr.ecr.eu-north-1.amazonaws.com/duration-model"
 REMOTE_TAG="v1"
 REMOTE_IMAGE=${REMOTE_URI}:${REMOTE_TAG}
 

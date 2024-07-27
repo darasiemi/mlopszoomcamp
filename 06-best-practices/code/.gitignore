@@ -1,3 +1,2 @@
 __pycache__
-
-integration-tests/docker-compose.yaml
+integration-tests/model/*
